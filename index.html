@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅读 APP 订阅源</title>
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #24292f;
+            --link-color: #0969da;
+            --border-color: #d0d7de;
+            --header-bg: #f6f8fa;
+            --item-hover: #f6f8fa;
+            --btn-bg: #2da44e;
+            --btn-text: #ffffff;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0d1117;
+                --text-color: #c9d1d9;
+                --link-color: #58a6ff;
+                --border-color: #30363d;
+                --header-bg: #161b22;
+                --item-hover: #161b22;
+                --btn-bg: #238636;
+                --btn-text: #ffffff;
+            }
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+            line-height: 1.5;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
+        }
+        .repo-section {
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        .repo-header {
+            background-color: var(--header-bg);
+            padding: 16px;
+            font-size: 1.5em;
+            font-weight: 600;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .category {
+            padding: 16px;
+        }
+        .category-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-color);
+        }
+        .item-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+        .item:hover {
+            background-color: var(--item-hover);
+        }
+        .item-name {
+            font-weight: 500;
+            margin-right: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .import-btn {
+            display: inline-block;
+            padding: 5px 12px;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 20px;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            user-select: none;
+            border: 1px solid rgba(27, 31, 36, 0.15);
+            border-radius: 6px;
+            background-color: var(--btn-bg);
+            color: var(--btn-text);
+            text-decoration: none;
+            transition: .2s cubic-bezier(0.3, 0, 0.5, 1);
+            transition-property: color, background-color, border-color;
+        }
+        .import-btn:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.9em;
+            color: #8b949e;
+        }
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>阅读 APP 订阅源合集</h1>
+
+        <div class="repo-section">
+            <div class="repo-header">Legado 官方源 (AOAOSTAR)</div>
+            
+            <div class="category">
+                <div class="category-title">书源</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="全量书源">全量书源</span>
+                        <a href="legado://import/bookSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/b778fe6b.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="XIU2精品书源 🔥">XIU2精品书源 🔥</span>
+                        <a href="legado://import/bookSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/71e56d4f.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="破冰书源 🔥">破冰书源 🔥</span>
+                        <a href="legado://import/bookSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/4dc410d1.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="关耳女频 🔥">关耳女频 🔥</span>
+                        <a href="legado://import/bookSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/e3e5d620.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="shidahuilang书源 🔥">shidahuilang书源 🔥</span>
+                        <a href="legado://import/bookSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/e29e19ee.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="酷安@三舞313书源">酷安@三舞313书源</span>
+                        <a href="legado://import/bookSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/2a1f129b.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="酷安@开源阅读软件">酷安@开源阅读软件</span>
+                        <a href="legado://import/bookSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/3bb7b751.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">订阅源</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="阅读APP源 - AOAOSTAR 🔥">阅读APP源 - AOAOSTAR 🔥</span>
+                        <a href="legado://import/rssSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/c5791307.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="阅读APP使用文档 🔥">阅读APP使用文档 🔥</span>
+                        <a href="legado://import/rssSource?src=https://raw.528528.xyz/aoaostar/legado/release/sources/9955b83c.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">净化规则</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="乌云净化 🔥">乌云净化 🔥</span>
+                        <a href="legado://import/replaceRule?src=https://raw.528528.xyz/aoaostar/legado/release/sources/3f067eb2.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">阅读排版</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="番茄小说 🔥">番茄小说 🔥</span>
+                        <a href="legado://import/readConfig?src=https://raw.528528.xyz/aoaostar/legado/release/sources/e99a592f.zip" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">主题</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="微信阅读 - 日间 🔥">微信阅读 - 日间 🔥</span>
+                        <a href="legado://import/theme?src=https://raw.528528.xyz/aoaostar/legado/release/sources/9c92e8e8.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="微信阅读 - 夜间 🔥">微信阅读 - 夜间 🔥</span>
+                        <a href="legado://import/theme?src=https://raw.528528.xyz/aoaostar/legado/release/sources/dbc65c69.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="厚墨 - 日间 🔥">厚墨 - 日间 🔥</span>
+                        <a href="legado://import/theme?src=https://raw.528528.xyz/aoaostar/legado/release/sources/bc26bb5e.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="厚墨 - 夜间 🔥">厚墨 - 夜间 🔥</span>
+                        <a href="legado://import/theme?src=https://raw.528528.xyz/aoaostar/legado/release/sources/39c60133.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">在线朗读引擎</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="酷安@三舞313听书TTS合集 🔥">酷安@三舞313听书TTS合集 🔥</span>
+                        <a href="legado://import/httpTTS?src=https://raw.528528.xyz/aoaostar/legado/release/sources/19db2f5e.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="月下自酌听书TTS合集">月下自酌听书TTS合集</span>
+                        <a href="legado://import/httpTTS?src=https://raw.528528.xyz/aoaostar/legado/release/sources/856adf0e.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="暗香听书TTS合集">暗香听书TTS合集</span>
+                        <a href="legado://import/httpTTS?src=https://raw.528528.xyz/aoaostar/legado/release/sources/a03fcd8c.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="千仞云听书TTS合集">千仞云听书TTS合集</span>
+                        <a href="legado://import/httpTTS?src=https://raw.528528.xyz/aoaostar/legado/release/sources/12212706.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="酷安@墨迹染流年分享的姬鲁听书TTS合集">酷安@墨迹染流年分享的姬鲁听书TTS合集</span>
+                        <a href="legado://import/httpTTS?src=https://raw.528528.xyz/aoaostar/legado/release/sources/5d6324c5.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="酷安@纵横不败大佬TTS听书源更新">酷安@纵横不败大佬TTS听书源更新</span>
+                        <a href="legado://import/httpTTS?src=https://raw.528528.xyz/aoaostar/legado/release/sources/856adf0e.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="repo-section">
+            <div class="repo-header">Yuedu 仓库源 (Luoyacheng)</div>
+            
+            <div class="category">
+                <div class="category-title">订阅源</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="洛娅橙">洛娅橙</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/订阅/洛娅橙/lyc.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="源仓库">源仓库</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/订阅/源仓库/yck.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="导入">导入</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/订阅/导入/daoru_在线版.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">小说源</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="pixiv">pixiv</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/书源/pixiv小说/pixiv.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="八叉">八叉</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/书源/八叉/8x.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">漫画源</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="绅士漫画">绅士漫画</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/漫画/绅士漫画/shenshi.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="读漫屋">读漫屋</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/漫画/读漫屋/duman.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">字典规则</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="合集">合集</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/字典/合集/zdhj.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="百度汉语">百度汉语</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/字典/百度汉语/baiducd.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+            <div class="category">
+                <div class="category-title">正则规则</div>
+                <div class="item-list">
+                    <div class="item">
+                        <span class="item-name" title="替换净化">替换净化</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/净化/合集/jh.json" class="import-btn">一键导入</a>
+                    </div>
+                    <div class="item">
+                        <span class="item-name" title="TXT目录">TXT目录</span>
+                        <a href="legado://import/importonline?src=https://raw.528528.xyz/Luoyacheng/yuedu/main/目录/合集/mlhj.json" class="import-btn">一键导入</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Generated based on <a href="https://github.com/aoaostar/legado">legado</a> and <a href="https://github.com/Luoyacheng/yuedu">yuedu</a> repositories.</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+[
+  {
+    "articleStyle": 0,
+    "customOrder": 0,
+    "enableJs": true,
+    "enabled": true,
+    "loadWithBaseUrl": true,
+    "ruleArticles": "id.content@h3",
+    "ruleLink": "a@href",
+    "ruleTitle": "a@textNodes",
+    "singleUrl": true,
+    "sortUrl": "首页::https://raw.528528.xyz/qck8/yuedu/dev/index.html",
+    "sourceGroup": "书源",
+    "sourceIcon": "https://github.com/favicon.ico",
+    "sourceName": "阅读书源聚合版",
+    "sourceUrl": "https://raw.528528.xyz/qck8/yuedu/dev/index.html"
+  }
+]
